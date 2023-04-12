@@ -2,3 +2,87 @@
   [1m[35m (95.2ms)[0m  [1m[35mCREATE DATABASE "Project_JK_test" ENCODING = 'unicode'[0m
   [1m[35m (484.5ms)[0m  [1m[35mCREATE DATABASE "Project_JK_development" ENCODING = 'unicode'[0m
   [1m[35m (159.0ms)[0m  [1m[35mCREATE DATABASE "Project_JK_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2023-04-12 14:31:20 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 530)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 2811)
+
+
+Started GET "/" for ::1 at 2023-04-12 14:31:47 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 530)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 2811)
+
+
+Started GET "/" for ::1 at 2023-04-12 14:35:56 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 530)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 2811)
+
+
+Started GET "/users" for ::1 at 2023-04-12 14:38:41 -0400
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2023-04-12 14:46:36 -0400
+Processing by UsersController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2426)
+
+
+
+NameError - uninitialized constant UsersController::User
+        @users = User.all
+                 ^^^^:
+  app/controllers/users_controller.rb:4:in `index'
+
+Started GET "/users" for ::1 at 2023-04-12 14:48:59 -0400
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1399)
+
+
+Started GET "/" for ::1 at 2023-04-12 14:51:30 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/L/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 523)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1967)
+
+
+Started GET "/users?fav_food=pizza" for ::1 at 2023-04-12 14:52:48 -0400
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizza"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 477)
+
+
+Started GET "/users?fav_food=pizza" for ::1 at 2023-04-12 14:53:14 -0400
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizza"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1399)
+
+
+Started GET "/users?fav_food=pizzaasdafdfasf" for ::1 at 2023-04-12 14:53:20 -0400
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizzaasdafdfasf"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 174)
+
+
+Started POST "/users?post=pospos" for ::1 at 2023-04-12 14:55:14 -0400
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users?post=pospos" for ::1 at 2023-04-12 14:56:51 -0400
+Processing by UsersController#create as */*
+  Parameters: {"post"=>"pospos"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 255)
+
+
