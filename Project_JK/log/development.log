@@ -154,3 +154,616 @@ Processing by UsersController#show as */*
 Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 180)
 
 
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5405576068984137795)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230412193355)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230412193355"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-12 19:35:52.385617"], ["updated_at", "2023-04-12 19:35:52.385617"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5405576068984137795)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5405576068984137795)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230412193355)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230412193355"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5405576068984137795)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5405576068984137795)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230412193355)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230412193355"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5405576068984137795)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "kev"], ["email", "j@j.com"], ["created_at", "2023-04-12 19:50:02.812875"], ["updated_at", "2023-04-12 19:50:02.812875"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (23.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Delete All (2.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", nil]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Delete All (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", nil]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Delete All (2.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "abe"], ["email", "abe.as;ljfasd"], ["created_at", "2023-04-12 20:07:41.152082"], ["updated_at", "2023-04-12 20:07:41.152082"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "as;jdfja"], ["email", "as;kjdfa;s"], ["created_at", "2023-04-12 20:07:56.240884"], ["updated_at", "2023-04-12 20:07:56.240884"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "qowuer"], ["email", "qwuiorpu"], ["created_at", "2023-04-12 20:08:17.963436"], ["updated_at", "2023-04-12 20:08:17.963436"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/create" for ::1 at 2023-04-12 16:15:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+Started GET "/users/create" for ::1 at 2023-04-12 16:16:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started GET "/user/create" for ::1 at 2023-04-12 16:16:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user/create"):
+  
+Started GET "/users/create" for ::1 at 2023-04-12 16:16:40 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"create"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/users/create?user[name]=nameee&user[email]=bbbb" for ::1 at 2023-04-12 16:21:15 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+Started GET "/users/create" for ::1 at 2023-04-12 16:21:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"create"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 105)
+
+
+Started GET "/users/create?user[name]=nameee&user[email]=bbbb" for ::1 at 2023-04-12 16:21:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>{"name"=>"nameee", "email"=>"bbbb"}, "id"=>"create"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 131)
+
+
+Started GET "/users/create?user[name]=nameee" for ::1 at 2023-04-12 16:22:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>{"name"=>"nameee"}, "id"=>"create"}
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 119)
+
+
+Started GET "/users/create?user[name]=nameee" for ::1 at 2023-04-12 16:26:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>{"name"=>"nameee"}, "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 384)
+
+
+Started GET "/users/create?user[name]=nameee" for ::1 at 2023-04-12 16:26:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>{"name"=>"nameee"}, "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 125)
+
+
+Started POST "/users/create?user[name]=nameee&user[email]=bbbb" for ::1 at 2023-04-12 16:26:58 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+Started GET "/users/" for ::1 at 2023-04-12 16:27:13 -0400
+Processing by UsersController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 10)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 555)
+
+
+Started GET "/users/create?user[name]=nameee" for ::1 at 2023-04-12 16:27:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>{"name"=>"nameee"}, "id"=>"create"}
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 156)
+
+
+Started GET "/users/create?user" for ::1 at 2023-04-12 16:27:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>nil, "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 115)
+
+
+Started GET "/users/create?user=uss" for ::1 at 2023-04-12 16:27:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>"uss", "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 115)
+
+
+Started GET "/users/create?user" for ::1 at 2023-04-12 16:27:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>nil, "id"=>"create"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started GET "/users/create?user" for ::1 at 2023-04-12 16:29:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>nil, "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 374)
+
+
+Started GET "/users/create?user" for ::1 at 2023-04-12 16:29:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>nil, "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 114)
+
+
+Started GET "/users/create?user" for ::1 at 2023-04-12 16:29:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>nil, "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started GET "/users/create?users" for ::1 at 2023-04-12 16:29:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"users"=>nil, "id"=>"create"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started GET "/users/create?asdfasdf" for ::1 at 2023-04-12 16:29:19 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"asdfasdf"=>nil, "id"=>"create"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started POST "/users/create?user[name]=nameee&user[email]=bbbb" for ::1 at 2023-04-12 16:34:44 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+Started POST "/users/create?user[name]=nameee&user[email]=bbbb" for ::1 at 2023-04-12 16:35:08 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+Started POST "/users?user[name]=nameee&user[email]=bbbb" for ::1 at 2023-04-12 16:37:19 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"nameee", "email"=>"bbbb"}}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (12.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nameee"], ["email", "bbbb"], ["created_at", "2023-04-12 20:37:19.166802"], ["updated_at", "2023-04-12 20:37:19.166802"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 71ms (Views: 0.7ms | ActiveRecord: 41.8ms | Allocations: 8368)
+
+
+Started POST "/users?user[name]=nameee" for ::1 at 2023-04-12 16:37:36 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"nameee"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (4.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nameee"], ["email", nil], ["created_at", "2023-04-12 20:37:36.387574"], ["updated_at", "2023-04-12 20:37:36.387574"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 5.6ms | Allocations: 4201)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (6, nameee, null, 2023-04-12 20:37:36.387574, 2023-04-12 20:37:36.387574).:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users/banana" for ::1 at 2023-04-12 16:38:51 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/users/banana"):
+  
+Started POST "/users?name=rrd&email=bbb" for ::1 at 2023-04-12 16:41:12 -0400
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"rrd", "email"=>"bbb"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 636)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users?user[name]=abc&user[email]=def" for ::1 at 2023-04-12 16:42:16 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"abc", "email"=>"def"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "abc"], ["email", "def"], ["created_at", "2023-04-12 20:42:16.882932"], ["updated_at", "2023-04-12 20:42:16.882932"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 1.8ms | Allocations: 1924)
+
+
+Started POST "/users?user[name]=abc&user[email]=def" for ::1 at 2023-04-12 16:44:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"abc", "email"=>"def"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "abc"], ["email", "def"], ["created_at", "2023-04-12 20:44:14.197129"], ["updated_at", "2023-04-12 20:44:14.197129"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 8541)
+
+
+Started POST "/users?user[name]=abc" for ::1 at 2023-04-12 16:44:24 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"abc"}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "abc"], ["email", nil], ["created_at", "2023-04-12 20:44:24.493926"], ["updated_at", "2023-04-12 20:44:24.493926"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.1ms | Allocations: 4209)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (9, abc, null, 2023-04-12 20:44:24.493926, 2023-04-12 20:44:24.493926).:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=abc&user[email]=def" for ::1 at 2023-04-12 16:46:12 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"abc", "email"=>"def"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "abc"], ["email", "def"], ["created_at", "2023-04-12 20:46:12.436510"], ["updated_at", "2023-04-12 20:46:12.436510"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 21ms (Views: 2.6ms | ActiveRecord: 2.9ms | Allocations: 1938)
+
+
+Started POST "/users" for ::1 at 2023-04-12 16:46:19 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 632)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users?asdfasdf" for ::1 at 2023-04-12 16:46:30 -0400
+Processing by UsersController#create as */*
+  Parameters: {"asdfasdf"=>nil}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 591)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users?asdfasdf" for ::1 at 2023-04-12 16:47:29 -0400
+Processing by UsersController#create as */*
+  Parameters: {"asdfasdf"=>nil}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 1031)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/users?user[name]=abc&user[email]=def" for ::1 at 2023-04-12 16:47:35 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"abc", "email"=>"def"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "abc"], ["email", "def"], ["created_at", "2023-04-12 20:47:35.927819"], ["updated_at", "2023-04-12 20:47:35.927819"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 8.3ms | Allocations: 3917)
+
+
+Started POST "/users?user[name]=abc&" for ::1 at 2023-04-12 16:47:47 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"abc"}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "abc"], ["email", nil], ["created_at", "2023-04-12 20:47:47.645744"], ["updated_at", "2023-04-12 20:47:47.645744"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.1ms | Allocations: 3329)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (12, abc, null, 2023-04-12 20:47:47.645744, 2023-04-12 20:47:47.645744).:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=aaaa&user[email]=bbbb" for ::1 at 2023-04-12 16:48:11 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa", "email"=>"bbbb"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", "bbbb"], ["created_at", "2023-04-12 20:48:11.876249"], ["updated_at", "2023-04-12 20:48:11.876249"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 1926)
+
+
+Started POST "/users?user[name]=aaaa&user[email]=bbbb" for ::1 at 2023-04-12 16:49:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa", "email"=>"bbbb"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", "bbbb"], ["created_at", "2023-04-12 20:49:11.910432"], ["updated_at", "2023-04-12 20:49:11.910432"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 6.2ms | Allocations: 8543)
+
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 16:49:18 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 20:49:18.162745"], ["updated_at", "2023-04-12 20:49:18.162745"]]
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.7ms | Allocations: 4209)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (15, aaaa, null, 2023-04-12 20:49:18.162745, 2023-04-12 20:49:18.162745).:
+  app/controllers/users_controller.rb:17:in `create'
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 16:52:54 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 20:52:54.356004"], ["updated_at", "2023-04-12 20:52:54.356004"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.6ms | Allocations: 5627)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (16, aaaa, null, 2023-04-12 20:52:54.356004, 2023-04-12 20:52:54.356004).:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=aaaa&user[email]=bbb" for ::1 at 2023-04-12 16:53:21 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa", "email"=>"bbb"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", "bbb"], ["created_at", "2023-04-12 20:53:21.114863"], ["updated_at", "2023-04-12 20:53:21.114863"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 1.7ms | Allocations: 2047)
+
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 16:53:29 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (37.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 20:53:29.496555"], ["updated_at", "2023-04-12 20:53:29.496555"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 38.4ms | Allocations: 3292)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (18, aaaa, null, 2023-04-12 20:53:29.496555, 2023-04-12 20:53:29.496555).:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=aaaa&user[email]=bbb" for ::1 at 2023-04-12 16:53:34 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa", "email"=>"bbb"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", "bbb"], ["created_at", "2023-04-12 20:53:34.270664"], ["updated_at", "2023-04-12 20:53:34.270664"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 1940)
+
+
+Started POST "/users?user[name]=aaaa&user[email]=bbb" for ::1 at 2023-04-12 16:54:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa", "email"=>"bbb"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", "bbb"], ["created_at", "2023-04-12 20:54:20.486447"], ["updated_at", "2023-04-12 20:54:20.486447"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 5.5ms | Allocations: 8541)
+
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 16:54:26 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 20:54:26.129329"], ["updated_at", "2023-04-12 20:54:26.129329"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.4ms | Allocations: 4208)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (21, aaaa, null, 2023-04-12 20:54:26.129329, 2023-04-12 20:54:26.129329).:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=aaaa&user[email]=bbb" for ::1 at 2023-04-12 16:54:31 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa", "email"=>"bbb"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", "bbb"], ["created_at", "2023-04-12 20:54:31.247427"], ["updated_at", "2023-04-12 20:54:31.247427"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.5ms | Allocations: 1938)
+
+
+Started POST "/users?user[name]=aaaa&user[email]=bbb" for ::1 at 2023-04-12 16:57:08 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa", "email"=>"bbb"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", "bbb"], ["created_at", "2023-04-12 20:57:08.882732"], ["updated_at", "2023-04-12 20:57:08.882732"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 21.3ms | Allocations: 4428)
+
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 16:57:15 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 20:57:15.601451"], ["updated_at", "2023-04-12 20:57:15.601451"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.8ms | Allocations: 3356)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (24, aaaa, null, 2023-04-12 20:57:15.601451, 2023-04-12 20:57:15.601451).:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 16:59:41 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Create (9.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 21:00:19.908183"], ["updated_at", "2023-04-12 21:00:19.908183"]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 73299ms (ActiveRecord: 25.3ms | Allocations: 380397)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (25, aaaa, null, 2023-04-12 21:00:19.908183, 2023-04-12 21:00:19.908183).:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 17:02:06 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Create (4.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 21:02:13.482114"], ["updated_at", "2023-04-12 21:02:13.482114"]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 7286ms (ActiveRecord: 10.4ms | Allocations: 8369)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (26, aaaa, null, 2023-04-12 21:02:13.482114, 2023-04-12 21:02:13.482114).:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 17:05:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Create (11.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 21:06:00.460388"], ["updated_at", "2023-04-12 21:06:00.460388"]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 30470ms (ActiveRecord: 17.0ms | Allocations: 93515)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (27, aaaa, null, 2023-04-12 21:06:00.460388, 2023-04-12 21:06:00.460388).:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 17:07:29 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 21:07:46.756745"], ["updated_at", "2023-04-12 21:07:46.756745"]]
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 16900ms (ActiveRecord: 9.5ms | Allocations: 16038)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (28, aaaa, null, 2023-04-12 21:07:46.756745, 2023-04-12 21:07:46.756745).:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 17:10:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (4.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "aaaa"], ["email", nil], ["created_at", "2023-04-12 21:10:56.392055"], ["updated_at", "2023-04-12 21:10:56.392055"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 12165ms (ActiveRecord: 8.8ms | Allocations: 93571)
+
+
+
+ActiveRecord::NotNullViolation - PG::NotNullViolation: ERROR:  null value in column "email" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (29, aaaa, null, 2023-04-12 21:10:56.392055, 2023-04-12 21:10:56.392055).:
+  app/controllers/users_controller.rb:14:in `create'
+
+Started POST "/users?user[name]=aaaa" for ::1 at 2023-04-12 17:19:41 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"aaaa"}}
+Completed 422 Unprocessable Entity in 23096ms (Views: 1.9ms | ActiveRecord: 8.6ms | Allocations: 17428)
+
+
