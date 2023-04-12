@@ -1,2 +1,4 @@
   [1m[35m (118.1ms)[0m  [1m[35mCREATE DATABASE "Project_JK_development" ENCODING = 'unicode'[0m
   [1m[35m (95.2ms)[0m  [1m[35mCREATE DATABASE "Project_JK_test" ENCODING = 'unicode'[0m
+  [1m[35m (484.5ms)[0m  [1m[35mCREATE DATABASE "Project_JK_development" ENCODING = 'unicode'[0m
+  [1m[35m (159.0ms)[0m  [1m[35mCREATE DATABASE "Project_JK_test" ENCODING = 'unicode'[0m
